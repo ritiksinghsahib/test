@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    {% load static %}
+    <meta charset="utf-8"  >
+    <meta name="viewport" content="width=device-width, initial-scale=1;X-Content-Type-Options=nosniff"  >
+    <meta name="keywords" content="ritiksinghsahib,RSS,Ritik singh sahib,RASSAVNI_FOUNDATION,rassavni;X1-Content-Type-Options=nosniff">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+<link rel = "icon" href = "{% static 'rss/images/security.png' %}" type = "image/x-icon">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+    <link rel="stylesheet" href="{% static 'rss/css/animate.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/d1421962d2.js" crossorigin="anonymous"></script>
+    <script type="text/javascript"> 
+        function disableselect(e){  
+        return false  
+        }  
+        
+        function reEnable(){  
+        return true  
+        }  
+        
+        //if IE4+  
+        document.onselectstart=new Function ("return false")  
+        document.oncontextmenu=new Function ("return false")  
+        //if NS6  
+        if (window.sidebar){  
+        document.onmousedown=disableselect  
+        document.onclick=reEnable  
+        }
+        </script>
+
+
+    <title>{% block title %} {% endblock %}</title>
+</head>
+
+<body> 
+     <div id="loader" class="text-center">
+        <img class="img-fluid" src="{% static 'rss/images/loder.png' %}" alt="ritksinghsahib" class="shadow-lg p-3 mb-5 bg-white rounded">
+      </div>
+      <script>
+        document.onreadystatechange = function () {
+          if (document.readyState !== "complete") {
+            document.querySelector(
+              "body").style.visibility = "hidden";
+            document.querySelector(
+              "#loader").style.visibility = "visible";
+          } else {
+            document.querySelector(
+              "#loader").style.display = "none";
+            document.querySelector(
+              "body").style.visibility = "visible";
+          }
+        };
+      </script>
+
+    {% block body %}
+    {% load static %}
+    
+   
+    {% block script %} {% endblock %}
+
+    {% endblock %}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+    crossorigin="anonymous"></script>
+
+ 
+    <footer class="footer bg-dark text-white" style="width:100%;" >
+        <div class="footer__addr">
+            <h1 class="footer__logo" style="font-family: 'Audiowide', cursive;">RSS</h1>
+            <h2 class="nav__title">Company's i 'm associated with</h2>
+            <ul class="nav__ul">
+                <li style="font-family: 'Audiowide', cursive; color:whitesmoke ;">
+                    <a href="https://cysec.in/">CYSEC-ALLIANCE</a>
+                </li>
+
+                <li style="font-family: 'Audiowide', cursive;">
+                    <a href="https://www.befojji.in/" >BEFOJI_OPSEC</a>
+                </li>
+
+               
+            </ul>
+    
+        </div>
+    
+        <ul class="footer__nav">
+             
+            <li class="nav__item">
+                <a href="{% url 'Regularupdate' %}"> <h2 class="nav__title text-white">Regular Update</h2> </a>
+    
+                <ul class="nav__ul">
+                    <li>
+                        <a class="text-white" href="https://www.youtube.com/channel/UCiV5uK2vCGySnp2TZuHQdHQ"> YOUTUBE CHANNEL <script src="https://apis.google.com/js/platform.js"></script>
+
+                            <div class="g-ytsubscribe" data-channelid="UCiV5uK2vCGySnp2TZuHQdHQ" data-layout="default" data-theme="dark" data-count="hidden"></div></a></li>
+    
+                    <li>
+                        <a href="{% url 'Event' %}">UPCOMING EVENTS</a>
+                    </li>
+    
+                   
+                </ul>
+            </li>
+            <li class="nav__item">
+                <h2 class="nav__title" ><a  href="mailto:sahibsinghritik@protonmail.com" class="text-white"> Contact </a></h2>
+    
+                <ul class="nav__ul">
+                    <li>
+                        <a href="{% url 'services' %}" style="color: whitesmoke;">Services Offered </a>
+                    </li>
+    
+                    <li>
+                        <a href="https://instagram.com/ritiksinghsahib/" class="active" style="color: white;">Message for Cyber Awarness Session <span class="badge badge-pill badge-sucess">(FREE)</span>
+                            </a>
+                    </li>
+    
+                    <li>
+                        <a href="{% url 'sitemap' %}">Sitemap</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav__item">
+                <h6 class="nav__title" style="font-family: 'Audiowide', cursive; font-size: 30px;"> <a style="color: whitesmoke;" href="mailto:sahibsinghritik@protonmail.com"><i class="fas fa-envelope-square"></i> Email</a></h6>
+            </li>
+            <br>
+          
+            <li class="nav_item">
+                <img src="{% static 'rss/images/copconnect.png' %}" alt="copconnect" class="mx-auto img-fluid bg-white">
+            </li>
+            </ul>
+    
+      
+        <div class="card text-center" style="background-color: #2979ff;" >
+            <h6 class="h6"style="font-family: 'Audiowide', cursive;">&copy;RASSAVNI_FOUNDATION</h6>
+        </div>
+    </footer>
+</body>
+
+</html>

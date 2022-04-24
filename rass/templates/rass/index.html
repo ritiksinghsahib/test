@@ -1,0 +1,22 @@
+{% extends 'rass/basic.html' %}
+
+{% block body %}
+{% autoescape on %}
+<div class="card mb-3" style="max-width: 100%;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="/media/{{bl.0.img}}" alt="blogimg" class="img-fluid">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{bl.0.title}}</h5>
+          <p class="card-text">{{bl.0.body}}</p>
+          <p class="card-text"><small class="text-muted">{{bl.0.last}}</small></p>
+          
+          <p class="card-text"><small class="text-muted">{{bl.0.writer}}</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endautoescape %}
+  {% endblock %}

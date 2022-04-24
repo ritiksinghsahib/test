@@ -1,0 +1,44 @@
+{% extends 'rss/basic.html' %}
+{% block title %}Events{% endblock %}
+{% block body %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{% url 'Home' %}">Home</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'Event' %}">Upcoming Event</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'Regularupdate' %}">Regular Update</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'services' %}">Services</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+           <button class="btn btn-primary"><a class="text-white" style="text-decoration: none;" href="https://forms.gle/56DDJXVzsU9xwkgT9">Consult For Cyber Crime Intervention</a></button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <div class="shadow-lg p-3 mb-5 bg-body rounded">
+  <div class="card mb-3" style="max-width: 100%;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img class="img-fluid col-sm" src="/media/{{ev.0.img}}" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{ev.0.eve_name}}</h5>
+          <p class="card-text">{{ev.0.eve_desc}}.</p>
+          <p class="card-text"><small class="text-muted">{{ev.0.updated_at}}</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  {% endblock %}

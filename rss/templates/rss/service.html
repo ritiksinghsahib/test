@@ -1,0 +1,59 @@
+{% extends 'rss/basic.html' %}
+{% block title %}Services{% endblock %}
+{% block body %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{% url 'Home' %}">Home</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'Event' %}">Upcoming Event</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'Regularupdate' %}">Regular Update</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+           <button class="btn btn-primary"><a class="text-white" style="text-decoration: none;" href="https://forms.gle/56DDJXVzsU9xwkgT9">Consult For Cyber Crime Intervention</a></button>
+        </form>
+      </div>
+    </div>
+  </nav>
+{% load static %}
+<div class="container bg-dark">
+  <div class="row">
+    <div class="col-lg col-md  col-sm">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Web development</li>
+          <li class="list-group-item">Digital Marketing</li>
+          <li class="list-group-item">Cyber Security training</li>
+          <li class="list-group-item">Cyber Security Consult</li>
+          <li class="list-group-item">Data Analytics</li>
+          <li class="list-group-item">Cyber Awarness / Webinar in Schools<span class="badge badge-pill badge-danger" style="color: red;">(FREE)</span></li>
+        </ul>
+   
+    </div>
+    <div class="col-lg col-md col-sm">
+      <h3 class="h3 text-white" style="font-family: 'Josefin Sans', sans-serif;">Services form</h3>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfBAu2VvJySA4k2RT5My17rD2BKh3jtTpH62rIivSdo9K35Yw/viewform?embedded=true" width="100%" height="350px;" frameborder="0" marginheight="0" marginwidth="0"  content="deny">Loading…</iframe>
+    </div>
+</div>
+</div>
+</div>
+<div class="container" style="width: 100%;">
+  <h3 class="h3" style="font-family: 'Josefin Sans', sans-serif;">Awarness/ webinar form</h3>
+  <div class="row bg-dark">
+    <div class="col-lg col-md col-sm">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScAXBM6PVDZ_PGw4agjQVbbgkOA_0lA6b1GCSrMgmkvn9JecQ/viewform?embedded=true"  width="100%" height="350px;"frameborder="0" marginheight="0" marginwidth="0"  content="deny" >Loading…</iframe>
+  </div>
+  
+</div>
+</div>
+<br>
+{% endblock %}

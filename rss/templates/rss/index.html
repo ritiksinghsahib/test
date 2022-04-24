@@ -1,0 +1,268 @@
+{% extends 'rss/basic.html' %}
+{% block title %}RSS ! ritiksinghsahib{% endblock %}
+<div style="width: 100%;">
+  {% block body %}
+{% load static %}
+<div class="card bg-dark text-white">
+  <img src="{% static 'rss/images/loader_.gif' %}" class="card-img" alt="hacker" style="height: 620px;">
+  <div class="card-img-overlay">
+    <div class="text-center  col-sm col-md col-lg ">
+      <img src="{% static 'rss/images/main.png' %}" alt="singh" class="img-fluid col-lg col-md col-sm shadow-lg p-3 mb-3 "
+        style="height: 400px;border-radius: 50%;">
+      <h1>I'm {{rs.0.rassav_name}}</h1>
+      <q style="font-family: 'Josefin Sans', sans-serif;font-size: 20px;" > {{rs.0.desc}}</q>
+      <p style="font-family: 'Josefin Sans', sans-serif;"><a href="https://www.linkedin.com/in/ritiksinghsahib"><i
+            class="fab fa-linkedin" style="font-size: 30px; color: white;"></i></a> <a
+          href="https://www.instagram.com/ritiksinghsahib"><i class="fab fa-instagram"
+            style="font-size: 30px; color: white;"></i></a></p>
+
+
+    </div>
+  </div>
+</div>
+<div class="container col-lg col-md col-sm">
+  <div class="row">
+    <div class="col-lg col-md col-sm text-center " style="font-family: 'Josefin Sans', sans-serif;">
+      <h2>About Me <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="orange"
+          class="bi bi-person-badge" viewBox="0 0 16 16">
+          <path d="M6.5 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1h-3zM11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+          <path
+            d="M4.5 0A2.5 2.5 0 0 0 2 2.5V14a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2.5A2.5 2.5 0 0 0 11.5 0h-7zM3 2.5A1.5 1.5 0 0 1 4.5 1h7A1.5 1.5 0 0 1 13 2.5v10.795a4.2 4.2 0 0 0-.776-.492C11.392 12.387 10.063 12 8 12s-3.392.387-4.224.803a4.2 4.2 0 0 0-.776.492V2.5z" />
+        </svg></h2>
+    </div>
+  </div>
+
+</div>
+<div class="container col-lg col-md col-sm">
+  <div class="card">
+    <div class="card-body" style="background-color: blueviolet;">
+      <h3 class="h3" style="font-family: 'Josefin Sans', sans-serif; color: whitesmoke;">{{ab.0.about_Desc}}</h3>
+    </div>
+  </div>
+</div>
+<div class="bg-dark">
+  <div class="container bootdey">
+    <div class="card bg-dark text-white">
+      <div class="card-body">
+        <h3 class="h3" style="font-family: 'Josefin Sans', sans-serif;"> Professional Experience</h3>
+      </div>
+    </div>
+
+    <div class="row gutters">
+      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+        <div class="card">
+          <div class="card-body">
+            <!-- Timeline start -->
+            <div class="timeline">
+              <div class="timeline-row">
+                <div class="timeline-time">
+                  {{pe.4.ProfessionalExperience_company}}
+                </div>
+                <div class="timeline-dot fb-bg"></div>
+                <div class="timeline-content">
+                  <i class="fas fa-briefcase"></i>
+                  <h4 class="col-xl-12 col-lg-12 col-md-12 col-sm-12 ">{{pe.4.ProfessionalExperience_post}}</h4>
+                  <p>{{pe.4.ProfessionalExperience_description}}</p>
+                </div>
+              </div>
+              <div class="timeline-row">
+                <div class="timeline-time">
+                  {{pe.3.ProfessionalExperience_company}}
+                </div>
+                <div class="timeline-dot green-one-bg"></div>
+                <div class="timeline-content green-one">
+                  <i class="fas fa-briefcase"></i>
+                  <h4 class="col-xl-12 col-lg-12 col-md-12 col-sm-12 ">{{pe.3.ProfessionalExperience_post}}</h4>
+                  <p>
+                    {{pe.3.ProfessionalExperience_description}}
+                  </p>
+                </div>
+              </div>
+              <div class="timeline-row">
+                <div class="timeline-time">
+                  {{pe.2.ProfessionalExperience_company}}
+                </div>
+                <div class="timeline-dot green-two-bg"></div>
+                <div class="timeline-content green-two">
+                  <i class="far fa-id-badge"></i>
+                  <h4 class="col-xl-12 col-lg-12 col-md-12 col-sm-12 ">{{pe.2.ProfessionalExperience_post}}</h4>
+                  <p>{{pe.2.ProfessionalExperience_description}}</p>
+                </div>
+              </div>
+              <div class="timeline-row">
+                <div class="timeline-time">
+                  {{pe.1.ProfessionalExperience_company}}
+                </div>
+                <div class="timeline-dot green-three-bg"></div>
+                <div class="timeline-content green-three">
+                  <i class="far fa-id-badge"></i>
+                  <h4 class="col-xl-12 col-lg-12 col-md-12 col-sm-12 ">{{pe.1.ProfessionalExperience_post}}</h4>
+                  <p>
+                    {{pe.1.ProfessionalExperience_description}}
+                  </p>
+                </div>
+              </div>
+              <div class="timeline-row">
+                <div class="timeline-time">
+                  {{pe.0.ProfessionalExperience_company}}
+                </div>
+                <div class="timeline-dot green-three-bg"></div>
+                <div class="timeline-content green-three">
+                  <i class="fas fa-briefcase"></i>
+
+
+                  <h4>{{pe.0.ProfessionalExperience_post}}</h4>
+                  <p>
+                    {{pe.0.ProfessionalExperience_description}}
+                  </p>
+                </div>
+              </div>
+
+              <!-- Timeline end -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container bootdey">
+      <div class="card bg-dark text-white">
+        <div class="card-body">
+          <h3 class="h3" style="font-family: 'Josefin Sans', sans-serif;"> Educational Details</h3>
+        </div>
+      </div>
+
+      <div class="row gutters">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+          <div class="card">
+            <div class="card-body">
+              <!-- Timeline start -->
+              <div class="timeline">
+                <div class="timeline-row">
+                  <div class="timeline-time">
+                    {{ee.0.ed_qua_name}}
+                  </div>
+                  <div class="timeline-dot fb-bg"></div>
+                  <div class="timeline-content">
+                    <i class="fas fa-graduation-cap"></i>
+                    <p>{{ee.0.ed_qua_descr}}</p>
+                  </div>
+                </div>
+                <div class="timeline-row">
+                  <div class="timeline-time">
+                    {{ee.1.ed_qua_name}}
+                  </div>
+                  <div class="timeline-dot green-one-bg"></div>
+                  <div class="timeline-content green-one">
+                    <i class="fas fa-school"></i>
+                    <h4 class="col-xl-12 col-lg-12 col-md-12 col-sm-12 ">{{ee.1.ed_qua_descr}}</h4>
+                   
+                  </div>
+                </div>
+                <div class="timeline-row">
+                  <div class="timeline-time">
+                    {{ee.2.ed_qua_name}}
+                  </div>
+                  <div class="timeline-dot green-one-bg"></div>
+                  <div class="timeline-content green-one">
+                    <i class="fas fa-school"></i>
+                    <h4 class="col-xl-12 col-lg-12 col-md-12 col-sm-12 ">{{ee.2.ed_qua_descr}}</h4>
+                    
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+<div class="container bootdey">
+  <div class="card bg-dark text-white">
+    <div class="card-body">
+      <h3 class="h3" style="font-family: 'Josefin Sans', sans-serif;"> Skills</h3>
+    </div>
+  </div>
+<!-- skills -->
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <div class="card" style="width: 18rem;">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">{{sk.0.skill_name}}</li>
+          <li class="list-group-item">{{sk.1.skill_name}}</li>
+          <li class="list-group-item">{{sk.2.skill_name}}</li>
+          <li class="list-group-item">{{sk.3.skill_name}}</li>
+          <li class="list-group-item">{{sk.4.skill_name}}</li>
+          <li class="list-group-item">{{sk.5.skill_name}}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="card" style="width: 18rem;">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">{{sk.6.skill_name}}</li>
+          <li class="list-group-item">{{sk.7.skill_name}}</li>
+          <li class="list-group-item">{{sk.8.skill_name}}</li>
+          <li class="list-group-item">{{sk.9.skill_name}}</li>
+          <li class="list-group-item">{{sk.10.skill_name}}</li>
+          <li class="list-group-item">{{sk.11.skill_name}}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="card" style="width: 18rem;">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">{{sk.12.skill_name}}</li>
+          <li class="list-group-item">{{sk.13.skill_name}}</li>
+          <li class="list-group-item">{{sk.14.skill_name}}</li>
+          <li class="list-group-item">{{sk.15.skill_name}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!-- this section is for certificates-->
+<div class="container bootdey">
+  <div class="card bg-dark text-white">
+    <div class="card-body">
+      <h3 class="h3" style="font-family: 'Josefin Sans', sans-serif;"> Certificates</h3>
+    </div>
+  </div>
+  </div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+     <img class="img-fluid col-lg-12 col-md col-sm" src="{% static 'rss/images/cert.jpg' %}" alt="Datascience" srcset="">
+    </div>
+    <div class="col-sm">
+      <img class="img-fluid col-lg-12 col-md col-sm" src="{% static 'rss/images/RITIK_SINGH.png' %}" alt="OSINT" srcset="">
+    </div>
+    <div class="col-sm">
+      <img class ="img-fluid col-lg-12 col-md col-sm"src="{% static 'rss/images/FLUTTER.jpeg' %}" alt="FLUTTER" srcset="">
+    </div>
+  </div>
+  
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+     </div>
+  <div class="col-sm">
+    
+  </div>
+  <div class="col-sm">
+   </div>
+  </div>
+
+</div>
+<!--copconnect section -->
+</div>
+</div>
+
+{% endblock %}
